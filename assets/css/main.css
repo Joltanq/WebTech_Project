@@ -1,0 +1,20 @@
+nav{
+    display: none;
+}
+
+#mobile-menu-button{
+    display: block;
+}
+
+/* Desktop layout */
+@media (min-width: 768px) {
+    nav{
+        display: flex;
+    }
+
+    #mobile-menu-button{
+        display: none;
+    }
+
+
+}
