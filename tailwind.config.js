@@ -4,7 +4,16 @@ module.exports = {
     './*.html',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary-light': '#A1E44D',
+        'primary-dark': '#60993E',
+        'secondary': '#685044',
+        'tertiary': '#3A405A',
+        'black': '#000000',
+        'white': '#ffffff'
+      },
+    },
   },
   plugins: [],
 };
