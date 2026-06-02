@@ -47,39 +47,81 @@
 <main>
 
     <div class="flex flex-row gap-4 p-4">
-        <div class=" border border-gray-500 flex flex-col gap-4 p-4">
-            <div class="bg-tertiary text-gray-200 p-4 -m-4 mb-0">
-                <h4 class="text-bold text-xl">Card Header</h4>
-            </div>
-            <div class="-m-4 mb-2 max-h-48 overflow-hidden">
+        <div class="flex flex-col gap-4">
+<!--            picture card-->
+            <div class="-m-4 mb-2  overflow-hidden  flex flex-col  p-4">
                 <img src="./assets/img/IMG_3699.JPG" alt="Picture of me">
             </div>
-            <div class="flex flex-col gap-4">
-                <p>Card with Header, image, content, and footer</p>
-                <p>It is 1/4 of the parent container width.</p>
-            </div>
-            <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
-                <p>Card Footer Content</p>
-            </div>
-        </div>
 
+<!--            skills card-->
             <div class=" border border-gray-500 flex flex-col gap-4 p-4">
-                <div class="bg-tertiary text-gray-200 p-4 -m-4 mb-0">
-                    <h4 class="text-bold text-xl">Contact Me</h4>
+                <div class="bg-secondary text-gray-200 p-4 -m-4 mb-0">
+                    <h4 class="text-bold text-xl">Skills</h4>
                 </div>
-                <div class="flex flex-col gap-4">
-                    <p>This card contains text only, no image, just a plain simple text card.</p>
-                    <p>It also omits header and footer areas.</p>
-                    <p>It is 1/4 of the parent container width.</p>
-                </div>
-                <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
-                    <p>Card Footer Content</p>
+                <div class="flex flex-row gap-6 p-2" >
+                    <ul class = "list-disc">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                    <ul class = "list-disc">
+                        <li>Python</li>
+                        <li>C# </li>
+                        <li>Figma</li>
+                    </ul>
+                    <ul class = "list-disc">
+                        <li>TailwindCSS</li>
+                        <li>Wireframing </li>
+                        <li>Project Management</li>
+                    </ul>
                 </div>
 
+            </div>
 
-
+<!--Experience card-->
         </div>
+            <div class=" border border-gray-500 flex flex-col gap-4 p-4">
+                <div class="bg-secondary text-gray-200 p-4 -m-4 mb-0">
+                    <h4 class="text-bold text-xl">Experience</h4>
+                </div>
+<!--                scroll container-->
+                <div class=" flex-1 gap-4 snap-y snap-mandatory overflow-y-scroll">
+                    <div class="snap-start h-full flex flex-col gap-4 p-4 ">
+                        <p class="font-bold"> 2024 H2</p>
+                        <ul class = "list-disc">
+                            <li>Cybersecurity Risk Management</li>
+                            <li>Identify and Resolve ICT Problems </li>
+                            <li>Intro to Progamming </li>
+                            <li>IP4Riot </li>
+                        </ul>
+                    </div>
 
+                    <div class="snap-start h-full flex flex-col gap-4 p-4 ">
+                        <p class="font-bold"> 2025 H1</p>
+                        <ul class = "list-disc">
+                            <li>Data Driven Applications</li>
+                            <li>ICTPRG - C# </li>
+                        </ul>
+                    </div>
+
+                    <div class="snap-start h-full flex flex-col gap-4 p-4 ">
+                        <p class="font-bold"> 2025 H2</p>
+                        <ul class = "list-disc">
+                            <li> Mobile App Development</li>
+                            <li> Intermediate Programming </li>
+                        </ul>
+                    </div>
+
+                    <div class="snap-start h-full flex flex-col gap-4 p-4 ">
+                        <p class="font-bold"> 2026 H1</p>
+                        <ul class = "list-disc">
+                            <li> Innovation Project </li>
+                            <li> Web Technologies </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
     </div>
 </main>
 <!--add footer-->
