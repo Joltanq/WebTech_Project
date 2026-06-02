@@ -653,12 +653,20 @@ video {
   margin-top: 0px;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.max-h-48 {
+  max-height: 12rem;
 }
 
 .w-1\/4 {
@@ -713,6 +721,10 @@ video {
   gap: 1rem;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .border {
   border-width: 1px;
 }
@@ -758,6 +770,11 @@ video {
 .bg-tertiary {
   --tw-bg-opacity: 1;
   background-color: rgb(58 64 90 / var(--tw-bg-opacity, 1));
+}
+
+.bg-gray-800 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity, 1));
 }
 
 .p-4 {
