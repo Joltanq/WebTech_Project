@@ -729,8 +729,24 @@ video {
   max-width: 24rem;
 }
 
+.max-w-40 {
+  max-width: 10rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0;
 }
 
 .grow {
@@ -1089,8 +1105,28 @@ video {
     display: none;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
+  .sm\:w-64 {
+    width: 16rem;
+  }
+
   .sm\:max-w-96 {
     max-width: 24rem;
+  }
+
+  .sm\:max-w-48 {
+    max-width: 12rem;
+  }
+
+  .sm\:max-w-60 {
+    max-width: 15rem;
+  }
+
+  .sm\:max-w-56 {
+    max-width: 14rem;
   }
 
   .sm\:grid-cols-6 {
@@ -1099,6 +1135,14 @@ video {
 
   .sm\:flex-row {
     flex-direction: row;
+  }
+
+  .sm\:items-center {
+    align-items: center;
+  }
+
+  .sm\:justify-center {
+    justify-content: center;
   }
 
   .sm\:text-sm\/6 {
