@@ -12,19 +12,19 @@
 
     <!--sticky header -->
     <header>
-        <div class="sticky top-0 flex justify-between p-6 mx-auto md:flex-row gap-2 bg-primary-dark text-white">
+        <div class="sticky top-0 flex justify-between p-6 mx-auto gap-2 items-center bg-primary-dark text-white">
             <a class="flex items-center mb-4 md:mb-0 gap-2">
                 <img src="./assets/img/penguin.png" alt="Penguin Logo" height="40" width="40">
-                <p class="text-sm">Welcome to my site</p>
+                <h1 class="text-sm">Welcome to my site</h1>
             </a>
-            <nav>
+            <nav class="hidden sm:block">
                 <ul id = 'menu-items' class="flex gap-4">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./resume.html">Resume</a></li>
                     <li><a href="./mywork.html">Projects</a></li>
                 </ul>
             </nav>
-            <button id='mobile-menu-button'>
+            <button id='mobile-menu-button' class="sm:hidden">
                 <i class="fa-solid fa-bars" ></i>
             </button>
 
@@ -46,55 +46,44 @@
 
     <main>
 
-    <div class="flex flex-col gap-4 p-4">
+    <div class="flex flex-col gap-4 p-4 ">
             <div class=" border border-gray-500 flex flex-col gap-4 p-4">
                 <p>Welcome to my project!</p>
                 <a href="./about.html">Click here to find out more about me!</a>
             </div>
 
-        <div class="flex flex-row gap-4">
-            <a href="./contact.html">
-                <div class=" border border-gray-500 flex flex-col gap-4 p-4">
+        <div class="flex flex-col sm:flex-row gap-4">
+            <a href="./contact.html" class ="flex-1 flex">
+                <div class=" border border-gray-500 flex flex-col gap-4 p-4 w-full">
                     <div class="bg-tertiary text-gray-200 p-4 -m-4 mb-0">
                         <h4 class="text-bold text-xl">Contact Me</h4>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <p>This card contains text only, no image, just a plain simple text card.</p>
-                        <p>It also omits header and footer areas.</p>
-                        <p>It is 1/4 of the parent container width.</p>
-                    </div>
-                    <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
-                        <p>Card Footer Content</p>
+                        <p>Need to chat to me about something?</p>
+                        <p>Reach me here!</p>
                     </div>
                 </div>
             </a>
-            <a href="./resume.html">
-                <div class=" border border-gray-500 flex flex-col gap-4 p-4">
+            <a href="./resume.html" class ="flex-1 flex">
+                <div class=" border border-gray-500 flex flex-col gap-4 p-4 w-full">
                     <div class="bg-tertiary text-gray-200 p-4 -m-4 mb-0">
                         <h4 class="text-bold text-xl">Resume</h4>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <p>This card contains text only, no image, just a plain simple text card.</p>
-                        <p>It also omits header and footer areas.</p>
-                        <p>It is 1/4 of the parent container width.</p>
+                        <p>Curious about my experience?</p>
+                        <p>Learn more here!</p>
                     </div>
-                    <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
-                        <p>Card Footer Content</p>
-                    </div>
+
                 </div>
             </a>
-            <a href="./mywork.html">
-                <div class=" border border-gray-500 flex flex-col gap-4 p-4">
+            <a href="./mywork.html" class ="flex-1 flex">
+                <div class=" border border-gray-500 flex flex-col gap-4 p-4 w-full">
                     <div class="bg-tertiary text-gray-200 p-4 -m-4 mb-0">
                         <h4 class="text-bold text-xl">Projects</h4>
                     </div>
                     <div class="flex flex-col gap-4">
-                        <p>This card contains text only, no image, just a plain simple text card.</p>
-                        <p>It also omits header and footer areas.</p>
-                        <p>It is 1/4 of the parent container width.</p>
-                    </div>
-                    <div class="bg-gray-200 text-gray-800 p-4 -m-4 mt-0">
-                        <p>Card Footer Content</p>
+                        <p>Want to see what I've been up to?</p>
+                        <p>See them here</p>
                     </div>
                 </div>
             </a>

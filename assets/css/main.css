@@ -1,20 +1,20 @@
-nav{
-    display: none;
-}
+/*nav{*/
+/*    display: none;*/
+/*}*/
 
-#mobile-menu-button{
-    display: block;
-}
+/*#mobile-menu-button{*/
+/*    display: block;*/
+/*}*/
 
-/* Desktop layout */
-@media (min-width: 768px) {
-    nav{
-        display: flex;
-    }
+/*!* Desktop layout *!*/
+/*@media (min-width: 768px) {*/
+/*    nav{*/
+/*        display: flex;*/
+/*    }*/
 
-    #mobile-menu-button{
-        display: none;
-    }
+/*    #mobile-menu-button{*/
+/*        display: none;*/
+/*    }*/
 
 
-}
+/*}*/
