@@ -1089,6 +1089,10 @@ video {
     display: none;
   }
 
+  .sm\:max-w-96 {
+    max-width: 24rem;
+  }
+
   .sm\:grid-cols-6 {
     grid-template-columns: repeat(6, minmax(0, 1fr));
   }
