@@ -1141,6 +1141,10 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
 
+.hover\:opacity-80:hover {
+  opacity: 0.8;
+}
+
 .focus\:bg-white\/5:focus {
   background-color: rgb(255 255 255 / 0.05);
 }
@@ -1195,6 +1199,16 @@ video {
 
 .focus-visible\:outline-indigo-600:focus-visible {
   outline-color: #4f46e5;
+}
+
+.has-\[\:checked\]\:bg-primary-light:has(:checked) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 228 77 / var(--tw-bg-opacity, 1));
+}
+
+.has-\[\:checked\]\:bg-primary-dark:has(:checked) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(96 153 62 / var(--tw-bg-opacity, 1));
 }
 
 .data-\[closed\]\:scale-95[data-closed] {
