@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Projects</title>
+  <link rel="stylesheet" href="./assets/css/site.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="icon" href="./favicon.ico">
+  <script src="https://kit.fontawesome.com/1fe9561f68.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<!--sticky header -->
+<header>
+  <div class="sticky top-0 flex justify-between p-6 mx-auto items-center bg-primary-dark text-white">
+    <a class="flex items-center gap-2">
+      <img src="./assets/img/penguin.png" alt="Penguin Logo" height="40" width="40">
+      <h1 class="text-lg">Welcome to my site</h1>
+    </a>
+    <nav class="hidden sm:block">
+      <ul id = 'menu-items' class="flex gap-4">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./resume.html">Resume</a></li>
+        <li><a href="./project_home.html">Projects</a></li>
+      </ul>
+    </nav>
+    <button id='mobile-menu-button' class="sm:hidden">
+      <i class="fa-solid fa-bars" ></i>
+    </button>
+  </div>
+</header>
+<!--mobile nav page-->
+<div id="mobile-nav-list" class="justify-center items-center flex-col inset-0 fixed z-50 bg-primary-light hidden">
+  <button id='close-mobile-nav-button' class="absolute right-6 top-6 z-10">
+    <i class="fa-solid fa-x"></i>
+  </button>
+
+  <ul>
+    <li><a href="./index.html">Home</a></li>
+    <li><a href="./resume.html">Resume</a></li>
+    <li><a href="./project_home.html">Projects</a></li>
+  </ul>
+</div>
+
+<main>
+
+  <div class="flex flex-col gap-4 p-4">
+    <div class=" border border-gray-500 flex flex-col gap-4 p-4">
+      <p>Projects</p>
+    </div>
+
+
+
+  </div>
+</main>
+<!--add footer-->
+<footer>
+  <div class="text-white bg-primary-dark
+        w-full  flex flex-col items-start justify-between p-6
+                mx-auto md:flex-row gap-2">
+    <a class="flex items-center mb-4 md:mb-0 gap-2
+                      hover:text-white transition duration-500 ease-in-out">
+      <img src="./assets/img/penguin.png" alt="Penguin Logo" height="40" width="40">
+      <p class="text-sm">Joltanq's Project Site</p>
+    </a>
+    <div class="flex flex-wrap text-sm pl-6 ml-6 text-base
+                    border-l border-gray-400 grow ">
+      <p class="m-auto">
+        © Copyright 2023 Joel Tan, all rights reserved.
+      </p>
+      <p class="m-auto">
+        <a href="https://www.flaticon.com/free-icons/penguin" title="penguin icons">Penguin icons created by Mihimihi - Flaticon</a>
+      </p>
+
+    </div>
+    <div class="flex flex-wrap text-sm pl-6 ml-6 text-base border-l border-gray-400
+                    md:mr-auto gap-2">
+
+      <a href="#"
+         class="border-b border-gray-400 hover:border-gray-200 hover:text-white
+                      transition duration-500 ease-in-out">About</a>
+      <a href="#"
+         class="border-b border-gray-400 hover:border-gray-200 hover:text-white
+                      transition duration-500 ease-in-out">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="./assets/js/scripts.js"></script>
+</body>
+</html>
