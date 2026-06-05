@@ -54,51 +54,41 @@
       <p> Use this random name generator to see what you like, and what you don't </p>
     </div>
 
-    <div class =" flex-row gap-4  justify-between hidden sm:flex">
-      <div class="bg-secondary text-gray-200 p-4 w-1/3 ">
-        <h4 class="text-bold text-xl">Boy</h4>
-      </div>
-
-      <div class="bg-secondary text-gray-200 p-4 w-1/3 ">
-        <h4 class="text-bold text-xl">Girl</h4>
-      </div>
-
-      <div class="bg-secondary text-gray-200 p-4 w-1/3">
-        <h4 class="text-bold text-xl">Surprise me</h4>
-      </div>
-    </div>
-
-    <div class ="sm:hidden">
-      <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
-       <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-      <el-dropdown class="inline-block w-full">
-        <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          Select
-          <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="-mr-1 size-5 text-gray-400">
-            <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-          </svg>
-        </button>
-
-        <el-menu anchor="bottom end" popover class="m-0 w-56 origin-top-right rounded-md bg-white p-0 shadow-lg outline outline-1 outline-black/5 transition [--anchor-gap:theme(spacing.2)] [transition-behavior:allow-discrete] data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in">
-          <div class="py-1">
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-none">Boy</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-none">Girl</a>
-            <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-none">Neutral</a>
-            <form action="#" method="POST">
-              <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-none">Sign out</button>
-            </form>
+    <form id ="baby_names_form" class="flex flex-col gap-4">
+      <fieldset>
+        <div class =" flex-row gap-4  justify-between hidden sm:flex">
+          <div class="bg-secondary text-gray-200 p-4 w-1/3 ">
+            <h4 class="text-bold text-xl">Boy</h4>
           </div>
-        </el-menu>
-      </el-dropdown>
 
-    </div>
+          <div class="bg-secondary text-gray-200 p-4 w-1/3 ">
+            <h4 class="text-bold text-xl">Girl</h4>
+          </div>
 
-    <button class =" bg-primary-light p-4 gap-4"> Submit ➡️</button>
+          <div class="bg-secondary text-gray-200 p-4 w-1/3">
+            <h4 class="text-bold text-xl">Surprise me</h4>
+          </div>
+        </div>
+
+
+      <div class ="sm:hidden">
+        <select name="gender" class="w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-900 bg-white">
+          <option value="">Select...</option>
+          <option value="boy">Boy</option>
+          <option value="girl">Girl</option>
+          <option value="neutral">Surprise Me!</option>
+        </select>
+
+        </div>
+    </fieldset>
+
+    <input id="baby_names_submit_button" type="submit" class =" bg-primary-light p-4 gap-4" value="Submit ➡️">
 
     <fieldset id="results">
       <h4> Let's see what you got!</h4>
       <div id="api_results"></div>
     </fieldset>
+    </form>
 
 
   </div>
