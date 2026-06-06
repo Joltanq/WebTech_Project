@@ -40,17 +40,44 @@ function getGenderValue(){
     }
 }
 
-// submit button logic. calls the API when clicked and returns results. also handles errors
-document.getElementById("baby_names_form").addEventListener("submit",async function(e) {
-    e.preventDefault();
-    const dropdownValue = getGenderValue();
-    const resultsArea = document.getElementById("api_results");
-
-        try{
-            const response_data = await callAPI(`https://api.api-ninjas.com/v1/babynames?gender=${dropdownValue}`);
-            resultsArea.textContent = response_data[0];
-        }catch(e){
-            resultsArea.textContent = e;
+function getEmojiValue(){
+    // try to get from the card value first. if fail, check the dropdown value
+    const checkedRadio = document.querySelector('input[name="emoji_selected"]:checked');
+    if (checkedRadio) {
+        return checkedRadio.value;
+    } else {
+        return document.querySelector('select[name="emoji_selected"]').value;
     }
+}
 
-})
+// submit button logic. calls the API when clicked and returns results. also handles errors
+if (document.getElementById("baby_names_form")) {
+    document.getElementById("baby_names_form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const selectedGender = getGenderValue();
+        const resultsArea = document.getElementById("api_results");
+
+        try {
+            const response_data = await callAPI(`https://api.api-ninjas.com/v1/babynames?gender=${selectedGender}`);
+            resultsArea.textContent = response_data[0];
+        } catch (e) {
+            resultsArea.textContent = e;
+        }
+    })
+}else {
+
+    document.getElementById("emoji_form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const emojiSelected = getEmojiValue();
+        const resultsArea = document.getElementById("api_results");
+
+        try {
+            const response_data = await callAPI(`https://api.api-ninjas.com/v1/emoji?group=${emojiSelected}`);
+            const emoji_obj = response_data[0];
+
+            resultsArea.textContent = emoji_obj.character;
+        } catch (e) {
+            resultsArea.textContent = e;
+        }
+    })
+}
