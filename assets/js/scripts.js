@@ -64,8 +64,9 @@ if (document.getElementById("baby_names_form")) {
             resultsArea.textContent = e;
         }
     })
-}else {
+}
 
+if (document.getElementById("emoji_form")) {
     document.getElementById("emoji_form").addEventListener("submit", async function (e) {
         e.preventDefault();
         const emojiSelected = getEmojiValue();
@@ -79,5 +80,13 @@ if (document.getElementById("baby_names_form")) {
         } catch (e) {
             resultsArea.textContent = e;
         }
+    })
+}
+
+if (document.getElementById("contact_form")) {
+    document.getElementById("contact_form").addEventListener("submit", async function (e) {
+        e.preventDefault();
+        document.getElementById("contact_dialog").showModal();
+
     })
 }
