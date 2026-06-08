@@ -89,28 +89,37 @@ if (document.getElementById("contact_form")) {
         e.preventDefault();
 
         const first_name = document.getElementById("first-name");
+        const first_name_error = document.getElementById("first-name-error");
         const last_name = document.getElementById("last-name");
+        const last_name_error = document.getElementById("last-name-error");
+        const email = document.getElementById("email");
+        const email_error = document.getElementById("email-error");
         const message = document.getElementById("message");
+        const message_error = document.getElementById("message-error");
 
-        if (first_name.value.trim() === "") {
-            first_name.style.border = "solid 2px red";
-        }else{
-            first_name.style.border = "solid 1px black";
+        let isValid = true;
+        function validate(input,error) {
+            if (input.value.trim() === ""){
+                input.style.border = "solid 2px red";
+                error.classList.remove("hidden");
+                isValid = false;
+            }else{
+                input.style.border = "solid 1px black";
+                error.classList.add("hidden");
+
+            }
         }
 
-        if (last_name.value.trim() === "") {
-            last_name.style.border = "solid 2px red";
-        }else{
-            last_name.style.border = "solid 1px black";
+        validate(first_name, first_name_error);
+        validate(last_name, last_name_error);
+        validate(email,email_error);
+        validate(message,message_error);
+
+        if (isValid) {
+            document.getElementById("contact_dialog").showModal();
+            document.getElementById("contact_form").reset();
         }
 
-        if (message.value.trim() === "") {
-            message.style.border = "solid 2px red";
-        }else{
-            message.style.border = "solid 1px black";
-        }
 
-
-        // document.getElementById("contact_dialog").showModal();
     })
 }
