@@ -83,10 +83,34 @@ if (document.getElementById("emoji_form")) {
     })
 }
 
+
 if (document.getElementById("contact_form")) {
     document.getElementById("contact_form").addEventListener("submit", async function (e) {
         e.preventDefault();
-        document.getElementById("contact_dialog").showModal();
 
+        const first_name = document.getElementById("first-name");
+        const last_name = document.getElementById("last-name");
+        const message = document.getElementById("message");
+
+        if (first_name.value.trim() === "") {
+            first_name.style.border = "solid 2px red";
+        }else{
+            first_name.style.border = "solid 1px black";
+        }
+
+        if (last_name.value.trim() === "") {
+            last_name.style.border = "solid 2px red";
+        }else{
+            last_name.style.border = "solid 1px black";
+        }
+
+        if (message.value.trim() === "") {
+            message.style.border = "solid 2px red";
+        }else{
+            message.style.border = "solid 1px black";
+        }
+
+
+        // document.getElementById("contact_dialog").showModal();
     })
 }
