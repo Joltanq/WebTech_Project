@@ -11,23 +11,21 @@
 <body>
 
 <!--sticky header -->
-<header>
-  <div class="sticky top-0 flex justify-between p-6 mx-auto items-center bg-primary-dark text-white">
-    <a href="./index.html" class="flex items-center gap-2">
-      <img src="./assets/img/penguin.png" alt="Penguin Logo" height="40" width="40">
-      <h1 class="text-lg">Welcome to my site</h1>
-    </a>
-    <nav class="hidden sm:block">
-      <ul id = 'menu-items' class="flex gap-4">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./resume.html">Resume</a></li>
-        <li><a href="./project_home.html">Projects</a></li>
-      </ul>
-    </nav>
-    <button id='mobile-menu-button' class="sm:hidden">
-      <i class="fa-solid fa-bars" ></i>
-    </button>
-  </div>
+<header class="sticky top-0 flex justify-between p-6 mx-auto items-center bg-primary-dark text-white">
+  <a href="./index.html" class="flex items-center gap-2">
+    <img src="./assets/img/penguin.png" alt="Penguin Logo" height="40" width="40">
+    <h1 class="text-lg">Welcome to my site</h1>
+  </a>
+  <nav class="hidden sm:block">
+    <ul id = 'menu-items' class="flex gap-4">
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./resume.html">Resume</a></li>
+      <li><a href="project_home.html">Projects</a></li>
+    </ul>
+  </nav>
+  <button id='mobile-menu-button' class="sm:hidden">
+    <i class="fa-solid fa-bars" ></i>
+  </button>
 </header>
 <!--mobile nav page-->
 <div id="mobile-nav-list" class="justify-center items-center flex-col inset-0 fixed z-50 bg-primary-light hidden">
