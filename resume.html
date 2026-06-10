@@ -44,41 +44,29 @@
     <div class="flex flex-col sm:flex-row gap-4 p-4 justify-center">
         <div class="flex flex-col gap-4 w-full sm:max-w-96">
 <!--            picture card-->
-            <div class="-m-4 mb-2  overflow-hidden  flex flex-col sm:block hidden p-4">
-                <img src="./assets/img/IMG_3699.JPG" alt="Picture of me">
-            </div>
+            <img src="./assets/img/IMG_3699.JPG" alt="Picture of me"  class="-m-4 mb-2  overflow-hidden  flex flex-col sm:block hidden p-4">
 
 <!--            skills card-->
             <div class=" border border-gray-500 flex flex-col gap-4 p-4">
-                <div class="bg-secondary text-gray-200 p-4 -m-4 mb-0">
-                    <h4 class=" text-xl">Skills</h4>
-                </div>
-                <div class="flex flex-row gap-6 p-2" >
-                    <ul class = "list-disc">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                    </ul>
-                    <ul class = "list-disc">
-                        <li>Python</li>
-                        <li>C# </li>
-                        <li>Figma</li>
-                    </ul>
-                    <ul class = "list-disc">
-                        <li>TailwindCSS</li>
-                        <li>Wireframing </li>
-                        <li>Project Management</li>
-                    </ul>
-                </div>
+                <h2 class=" bg-secondary text-gray-200 p-4 -m-4 mb-0 text-xl">Skills</h2>
 
+                <ul class = "list-disc  grid grid-cols-3 gap-x-8 gap-y-2 p-2" >
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>C# </li>
+                    <li>Figma</li>
+                    <li>TailwindCSS</li>
+                    <li>Wireframing </li>
+                    <li>Project Management</li>
+                </ul>
             </div>
 
 <!--Experience card-->
         </div>
             <div class=" border border-gray-500 flex flex-col gap-4 p-4 h-[478px]">
-                <div class="bg-secondary text-gray-200 p-4 -m-4 mb-0">
-                    <h4 class=" text-xl">Experience</h4>
-                </div>
+                    <h2 class=" text-xl bg-secondary text-gray-200 p-4 -m-4 mb-0">Experience</h2>
 <!--                scroll container-->
                 <div class=" flex-1 gap-4 snap-y snap-mandatory overflow-y-scroll">
                     <div class="snap-start h-full flex flex-col gap-4 p-4 ">
