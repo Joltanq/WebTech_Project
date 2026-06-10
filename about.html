@@ -14,7 +14,7 @@
 <header class="sticky top-0 flex justify-between p-6 mx-auto items-center bg-primary-dark text-white">
     <a href="./index.html" class="flex items-center gap-2">
         <img src="./assets/img/penguin.png" alt="Penguin Logo" height="40" width="40">
-        <font-bold class="text-lg">Welcome to my site</font-bold>
+        <span class="text-lg">Welcome to my site</span>
     </a>
     <nav class="hidden sm:block">
         <ul id = 'menu-items' class="flex gap-4">
@@ -41,31 +41,17 @@
 </div>
 
 <main>
-    <div class="flex gap-4 p-4 justify-center">
-        <div class="flex flex-col sm:flex-row sm:items-center gap-4 w-full">
-            <!--            picture card-->
-            <div class="-m-4 mb-0 overflow-hidden  flex-shrink-0 sm:w-64 p-4 ">
-                <img src="./assets/img/IMG_3699.JPG" alt="Picture of me" >
-            </div>
+    <!--            picture card-->
+    <div class="flex p-4 justify-center flex-col sm:flex-row sm:items-center gap-4 w-full">
+        <img src="./assets/img/IMG_3699.JPG" alt="Picture of me" class="-m-4 mb-0 overflow-hidden  flex-shrink-0 sm:w-64 p-4 ">
 
-            <div class=" border border-gray-500 flex flex-col gap-4 p-4 flex-1 ">
-                <div class="bg-secondary text-gray-200 p-4 -m-4 mb-0">
-                    <h4 class="text-bold text-xl">Something about me</h4>
-                </div>
-                <!--                scroll container-->
-                <div class=" ">
-                    <div class="flex flex-col gap-4 p-4 ">
-                        <article>
-                            <p> Curious by nature, I love learning new things. After completeing a certificate 4 in Programming, I have a better understanding of the software industry in general. I feel like I am equipped with the neccesary skills to be succesful in the industry.</p>
-                        </article>
-                    </div>
-                </div>
-        </div>
+        <article class=" border border-gray-500 flex flex-col gap-4 p-4 flex-1 ">
+            <p class="bg-secondary text-gray-200 p-4 -m-4 mb-0 text-bold text-xl">Something about me</p>
+                <p class="flex flex-col">
+                     Curious by nature, I love learning new things. After completeing a certificate 4 in Programming, I have a better understanding of the software industry in general. I feel like I am equipped with the neccesary skills to be succesful in the industry.
+                </p>
+        </article>
     </div>
-
-
-
-
 
 </main>
 <!--add footer-->
