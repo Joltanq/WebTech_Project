@@ -96,6 +96,7 @@ if (document.getElementById("contact_form")) {
         const email_error = document.getElementById("email-error");
         const message = document.getElementById("message");
         const message_error = document.getElementById("message-error");
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         let isValid = true;
         function validate(input,error) {
@@ -103,11 +104,23 @@ if (document.getElementById("contact_form")) {
                 input.style.border = "solid 2px red";
                 error.classList.remove("hidden");
                 isValid = false;
-            }else{
-                input.style.border = "solid 1px black";
-                error.classList.add("hidden");
-
+                return;
             }
+
+            // check email
+            if (input.id === "email") {
+                if (!emailPattern.test(input.value)) {
+                    input.style.border = "solid 2px red";
+                    error.textContent = "Valid email address format must follow the format asd@example.com";
+                    error.classList.remove("hidden");
+                    isValid = false;
+                    return;
+                }
+            }
+
+            // valid state
+            input.style.border = "solid 1px black";
+            error.classList.add("hidden");
         }
 
         validate(first_name, first_name_error);
@@ -119,7 +132,5 @@ if (document.getElementById("contact_form")) {
             document.getElementById("contact_dialog").showModal();
             document.getElementById("contact_form").reset();
         }
-
-
     })
 }
