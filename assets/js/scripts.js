@@ -5,12 +5,12 @@ const closeButton = document.getElementById("close-mobile-nav-button");
 hamburger.addEventListener("click", () => {
     mobileMenu.classList.remove("hidden");
     mobileMenu.classList.add("flex");
-})
+});
 
 closeButton.addEventListener("click", () => {
     mobileMenu.classList.add("hidden");
     mobileMenu.classList.remove("flex");
-})
+});
 
 
 async function callAPI(baseURL){
@@ -60,10 +60,10 @@ if (document.getElementById("baby_names_form")) {
         try {
             const response_data = await callAPI(`https://api.api-ninjas.com/v1/babynames?gender=${selectedGender}`);
             resultsArea.textContent = response_data[0];
-        } catch (e) {
-            resultsArea.textContent = e;
+        } catch (error) {
+            resultsArea.textContent = error;
         }
-    })
+    });
 }
 
 if (document.getElementById("emoji_form")) {
@@ -77,10 +77,10 @@ if (document.getElementById("emoji_form")) {
             const emoji_obj = response_data[0];
 
             resultsArea.textContent = emoji_obj.character;
-        } catch (e) {
-            resultsArea.textContent = e;
+        } catch (error) {
+            resultsArea.textContent = error;
         }
-    })
+    });
 }
 
 
@@ -167,5 +167,5 @@ if (document.getElementById("contact_form")) {
             document.getElementById("contact_dialog").showModal();
             document.getElementById("contact_form").reset();
         }
-    })
+    });
 }
