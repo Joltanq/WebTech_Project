@@ -97,6 +97,8 @@ if (document.getElementById("contact_form")) {
         const message = document.getElementById("message");
         const message_error = document.getElementById("message-error");
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const namePattern = /^[A-Za-z]{2,}$/;
+        const messagePattern = /^.{2,}$/;
 
         let isValid = true;
         function validate(input,error) {
@@ -112,6 +114,39 @@ if (document.getElementById("contact_form")) {
                 if (!emailPattern.test(input.value)) {
                     input.style.border = "solid 2px red";
                     error.textContent = "Valid email address format must follow the format asd@example.com";
+                    error.classList.remove("hidden");
+                    isValid = false;
+                    return;
+                }
+            }
+
+            // check first name
+            if (input.id === "first-name") {
+                if (!namePattern.test(input.value)) {
+                    input.style.border = "solid 2px red";
+                    error.textContent = "Your name must be at least 2 letters";
+                    error.classList.remove("hidden");
+                    isValid = false;
+                    return;
+                }
+            }
+
+            // check last name
+            if (input.id === "last-name") {
+                if (!namePattern.test(input.value)) {
+                    input.style.border = "solid 2px red";
+                    error.textContent = "Your name must be at least 2 letters";
+                    error.classList.remove("hidden");
+                    isValid = false;
+                    return;
+                }
+            }
+
+            // check message
+            if (input.id === "message") {
+                if (!messagePattern.test(input.value)) {
+                    input.style.border = "solid 2px red";
+                    error.textContent = "Your message must be at least 2 characters long";
                     error.classList.remove("hidden");
                     isValid = false;
                     return;
